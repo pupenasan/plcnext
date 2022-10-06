@@ -17,6 +17,11 @@
 
 - Задавши питання в [Issue в даному репозиторії](https://github.com/pupenasan/plcnext/issues). Як зареєструватися в репозиторії показано [тут](https://pupenasan.github.io/Git4All/events/workshop1.html)   
 
+## Окремі розділи довідки українською мовою
 
+перероблена, з доповненнями
+
+- [Сервісні компоненти](service_components/README.md) 
+- [Розширені функції та функціональні блоки](extended/README.md)
 
 ![](img.png)

@@ -1,3 +1,5 @@
+[На основну](..\README.md)
+
 # Технологія PLCnext  
 
 1. Про PLCnext.

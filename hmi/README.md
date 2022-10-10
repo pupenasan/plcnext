@@ -1,36 +1,60 @@
-# HMI Application
+[На основну](..\README.md)
 
-[Швидкий старт](hmiquickstart.md)
+# HMI застосунок
 
-PLCnext Engineer allows you to create an HMI (Human Machine Interface) application for 
+PLCnext Engineer дозволяє створювати програму HMI (людино-машинний інтерфейс) для
 
-- visualizing and monitoring
-- controlling and operating 
+- візуалізації та моніторингу
+- керування
 
-the control application running on your controller.
+керуючою програмою, що працює на вашому контролері.
 
-The HMI application consists of one or more HMI pages populated with  standard HMI objects or predefined HMI symbols which can be assigned to  HMI tags in order to animate them or send control commands to the  application.
+Програма HMI складається з однієї або кількох сторінок HMI, заповнених стандартними об’єктами HMI або попередньо означеними символами HMI, які можна призначити тегам HMI, щоб анімувати їх або надсилати команди керування програмі.
 
-For visualizing and controlling the automation application this way,  data must be exchanged between the HMI application and the controller.  This data exchange is realized by HMI tags.
-An HMI tag can be seen as an HMI-internal variable. An HMI tag is assigned to a global IEC  61131-3 variable or a local variable with set HMI attribute. Via the HMI tag, the HMI application gets read or write access to variables. By  adding a dynamic/action to an HMI object property and linking this  dynamic/action to an HMI tag, the value of the variable can be  visualized/written via the HMI.
+Для візуалізації та керування програмою автоматизації таким чином необхідно обмінюватися даними між програмою HMI та контролером. Цей обмін даними реалізується за допомогою тегів HMI. **Тег HMI** можна розглядати як внутрішню змінну HMI. Тег HMI присвоюється глобальній змінній IEC 61131-3 або локальній змінній із встановленим атрибутом `HMI`. Через тег HMI програма HMI отримує доступ для читання або запису до змінних. Додавши динаміку/дію до властивості об’єкта HMI і зв’язавши цю динаміку/дію з тегом HMI, значення змінної можна візуалізувати/записати через HMI.
 
-**Note**  Regarding their use in HMI pages, the following applies to variables of the Safety PLC: Safety-related IEC 61131-3 variables cannot be  used in an HMI page as no HMI tags can be created and assigned to  variables of a safety-related data type in the Safety PLC Data List. It is possible to create HMI tags for [exchange variables](file:///C:/Program Files/PHOENIX CONTACT/PLCnext Engineer 2022.6/en/Help/Variables_RoleMapping.htm), i.e., for Safety PLC variables of a standard data type which are assigned to a global variable of the standard PLC.
+Пов’язані з безпекою змінні IEC 61131-3 в Safety PLC не можна використовувати на сторінці HMI, оскільки теги HMI не можна створювати та призначати таким змінним. Можна створити теги HMI для змінних обміну, тобто для змінних Safety PLC стандартних даних типу, які призначаються глобальній змінній стандартного ПЛК.
 
-The HMI application data is stored automatically as part of the  project. The HMI application is part of the project image that is  written to the controller when executing the 'Write and Start Project'  command. In addition to the application logic and the  configuration/parameterization data of your project, the project image  contains all relevant HMI data. Using the web server on your controller, you can run the HMI application in a standard web browser and then  monitor and control the processes running on the controller.
+Дані програми HMI зберігаються автоматично як частина проекту. Програма HMI є частиною образу проекту, який записується на контролер під час виконання команди `Write and Start Project`. Окрім логіки програми та даних конфігурації/параметризації вашого проекту, образ проекту містить усі відповідні дані HMI. Використовуючи веб-сервер на контролері, ви можете запускати програму HMI у стандартному веб-браузері, а потім контролювати та керувати процесами, що виконуються на контролері.
 
-## Features at a glance
+## Короткий огляд функцій
 
-- Powerful HMI editor for designing HMI pages  using HMI objects, symbols and images inserted from the COMPONENTS area. Object properties can be edited in the dockable properties window.
-- Animation of HMI object properties such as object position, visibility, etc., by means of HMI tags.
-- Actions assigned to HMI objects allow writing values to the automation process (e.g. 'Action on click' for HMI buttons).
-- HMI symbol libraries provide predefined symbols.
-- Creation and re-use of user-defined HMI symbols.
-- Add images and re-use them in your HMI pages as often as required.
-- Create released HMI libraries of user-defined HMI images and symbols.
-- Flexible navigation to HMI pages by setting the 'Action on Click' dynamic for an HMI object.
-- Definition of the navigation structure: the  'Navigation' editor allows you to define how you can navigate between  your HMI pages in the project when running the HMI application.
-- Protecting the HMI application against unauthorized use by setting the access rights for HMI pages and HMI objects.
-- Create multilingual HMI applications by translating HMI texts in various languages.
-- Run the automation application directly from PLCnext Engineer using the web server of the controller.
-- Monitor and operate the automation application running on the controller via the HMI application in a standard web browser.
-- Optional HMI Generator which allows you to  automatically generate a complete visualization (HMI content) based on  your project with only one command.
+- Потужний редактор HMI для розробки сторінок HMI з використанням об’єктів HMI, символів і зображень, вставлених із області COMPONENTS. Властивості об’єкта можна редагувати у вікні властивостей. 
+
+- Анімація властивостей об'єкта HMI, таких як положення об'єкта, видимість тощо, за допомогою тегів HMI.
+- Дії, призначені об'єктам HMI, дозволяють записувати значення в процес автоматизації (наприклад, `Action on click` для кнопок HMI).
+- Бібліотеки символів HMI забезпечують попередньо означені символи.
+- Створення та повторне використання означених користувачем символів HMI.
+- Додавання зображення та повторного їх використання їх на своїх сторінках HMI так часто, як потрібно.
+- Створення та випуск бібліотек HMI із означених користувачем зображень і символів HMI.
+- Гнучка навігація до сторінок HMI шляхом встановлення динамічної дії `Action on Click`  для об’єкта HMI.
+- Визначення структури навігації: редактор `Navigation` дозволяє вам визначити, як ви можете переходити між сторінками HMI у проекті під час запуску програми HMI.
+- Захист програми HMI від несанкціонованого використання шляхом встановлення прав доступу для сторінок HMI та об’єктів HMI.
+
+- Створення багатомовних застосунків HMI, перекладаючи тексти HMI різними мовами.
+- Запуск програм автоматизації безпосередньо з PLCnext Engineer за допомогою веб-сервера контролера.
+- Контроль та керування програмою автоматизації, що працює на контролері, через програму HMI у стандартному веб-браузері.
+- Додатковий генератор HMI, який дозволяє автоматично створювати повну візуалізацію (вміст HMI) на основі вашого проекту за допомогою лише однієї команди.
+
+
+
+- [Швидкий старт](hmiquickstart.md)
+- Security for HMI
+- HMI Pages
+- 'Navigation' Editor
+- HMI Objects, Symbols, Images
+- HMI Tags
+- HMI Editor
+- Working with Objects
+- Standard HMI Objects
+- Combining Shapes
+- Drawing and Editing Paths
+- Working with Dynamics
+- Working with User-defined HMI Symbols
+- Working with Text Lists
+- Localization of the HMI Application
+- HMI Generator
+- HMI Web Server Settings
+- Connection between HMI client and PLCnext Technology Controller
+- Running the HMI Application
+

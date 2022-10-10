@@ -23,5 +23,6 @@
 
 - [Сервісні компоненти](service_components/README.md) 
 - [Розширені функції та функціональні блоки](extended/README.md)
+- [HMI](hmi/README.md)
 
 ![](img.png)

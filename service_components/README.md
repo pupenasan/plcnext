@@ -1,3 +1,5 @@
+[На основну](..\README.md)
+
 # Сервісні компоненти 
 
 https://www.plcnext.help/te/Service_Components/Service_Components.htm

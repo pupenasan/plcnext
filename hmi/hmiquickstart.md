@@ -17,9 +17,9 @@
 У POU `MyProgram1` створіть код на мові ST, що містить приклад коду та таблицю змінних із оголошенням змінної `RealVar`.
 
 ```pascal
-RealVar := RealVar + 0.006;   
-IF (RealVar > 10.0) THEN    
-	RealVar := 0.0;   
+RealVar := RealVar + 0.5;   
+IF (RealVar > 1000.0) THEN    
+    RealVar := 0.0;   
 END_IF;
 ```
 

@@ -1,4 +1,4 @@
-[Сервісні компоненти](..\README.md)
+[Сервісні компоненти](../README.md)
 
 # Proficloud V3 Device Management Service
 

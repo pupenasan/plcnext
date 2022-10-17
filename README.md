@@ -24,5 +24,7 @@
 - [Сервісні компоненти](service_components/README.md) 
 - [Розширені функції та функціональні блоки](extended/README.md)
 - [HMI](hmi/README.md)
+- [SQL](sql/README.md)
+- [Емулятор контролера](simul/README.md)
 
 ![](img.png)

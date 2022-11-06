@@ -45,7 +45,7 @@
 | **STRING data type**                                         |                                                              |
 | 0...1                                                        | Capacity - Maximum number of characters that the string can hold (from 0 to UINT16.MAX). |
 | 2...3                                                        | Length - Current number of characters in the string (from 0 to Capacity). |
-| 4...84  (for an 80 characters string)4...124  (for  a user-defined string of 120 characters) | String of ANSI characters followed by a trailing zero character. Each character is represented by one byte. |
+| 4...84  (for an 80 characters string)<br />4...124  (for  a user-defined string of 120 characters) | String of ANSI characters followed by a trailing zero character. Each character is represented by one byte. |
 | **WSTRING data type**                                        |                                                              |
 | 0-1                                                          | Capacity - Maximum number of characters that the string can hold (from 0 to UINT16.MAX). |
 | 2-3                                                          | Length - Current number of characters in the string (from 0 to Capacity). |
@@ -61,18 +61,18 @@
 
 #### Числові літерати
 
-| Тип                              | Приклади                                                     |
-| -------------------------------- | ------------------------------------------------------------ |
-| Integer literals                 | `-12` `0` `123_456` `+986`   Для літералів SAFEINT завжди потрібно вводити тип даних (`SAFEINT#`). |
-| Real literals                    | `-12.0` `0.0` `0.4560` `3.14159_26`                          |
-| Real literals with exponent      | `-1.34E-12` `-1.34e-12` `1.0E+6`                             |
-| Long Real literals               | `LREAL#-12.0` Observe the 2nd note below this table.         |
-| Long Real literals with exponent | `LREAL#2.3E-89`Observe the 2nd note below this table.        |
-| Base 2 literals                  | `INT#2#1111_1111`                                            |
-| Base 8 literals                  | `INT#8#377`                                                  |
-| Base 16 literals                 | `INT#16#FF` `SINT#16#ff`                                     |
-| Boolean FALSE and TRUE           | `FALSE`, `TRUE` <br />`SAFEFALSE`, `SAFETRUE`                |
-| Boolean 0 and 1                  | `0, 1`<br />Для літералів  `SAFEBOOL` має завжди  використовуватися `SAFEFALSE`, `SAFETRUE` |
+| Тип                     | Приклади                                                     |
+| ----------------------- | ------------------------------------------------------------ |
+| Integer                 | `-12` `0` `123_456` `+986`   Для літералів SAFEINT завжди потрібно вводити тип даних (`SAFEINT#`). |
+| Real                    | `-12.0` `0.0` `0.4560` `3.14159_26`                          |
+| Real with exponent      | `-1.34E-12` `-1.34e-12` `1.0E+6`                             |
+| Long Real               | `LREAL#-12.0` Observe the 2nd note below this table.         |
+| Long Real with exponent | `LREAL#2.3E-89`Observe the 2nd note below this table.        |
+| Base 2                  | `INT#2#1111_1111`                                            |
+| Base 8                  | `INT#8#377`                                                  |
+| Base 16                 | `INT#16#FF` `SINT#16#ff`                                     |
+| Boolean FALSE and TRUE  | `FALSE`, `TRUE` <br />`SAFEFALSE`, `SAFETRUE`                |
+| Boolean 0 and 1         | `0, 1`<br />Для літералів  `SAFEBOOL` має завжди  використовуватися `SAFEFALSE`, `SAFETRUE` |
 
 Літерали INT можна використовувати без ключового слова. Приклад: для `INT#16#ff` можна використовувати `16#ff`. Літерали `BOOL/SAFEBOOL` також можна використовувати без ключового слова. Приклади: для `BOOL#FALSE` можна використовувати `FALSE`, а для `SAFEBOOL#FALSE` можна використовувати `SAFEFALSE`.
 

@@ -2,8 +2,6 @@
 
 # REST data interface
 
-[TOC]
-
 ## Концепція
 
 [Довідкова інформація](https://www.plcnext.help/te/Service_Components/REST_data_interface/REST_data_interface_Introduction.htm)
